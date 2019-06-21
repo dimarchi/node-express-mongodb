@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>User login and registration</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200|Raleway&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="/css/mdb.css" />
+        <script src="/js/index.js"></script>
+    </head>
+
+    <body>
+
+        <nav>
+            <ul>
+                <li title="You are here.">Home</li>
+                <li title="Logout" class="logout"><a href="/logout" title="Click here to logout" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>User login and registration</h1>
+        </header>
+
+        <main class="logreg">
+            <form name="login" id="login" method="POST" action="/login">
+                <fieldset>
+                    <legend>Login</legend>
+                    <input type="text" name="loginname" id="loginname" placeholder="Please enter your user name." />
+                    <input type="password" name="loginpass" id="loginpass" placeholder="Please enter your password." />
+                    <button type="submit" name="loginbutton" id="loginbutton" title="Login using credentials above.">Login</button>
+                </fieldset>
+                <p id="loginresult">&nbsp;</p>
+            </form>
+
+            <form name="registration" id="registration" method="POST" action="/register">
+                <fieldset>
+                    <legend>Register</legend>
+                    <input type="text" name="registrationname" id="registrationname" placeholder="Enter your user name." />
+                    <input type="password" name="registrationpass" id="registrationpass" placeholder="Enter your password." />
+                    <input type="email" name="registrationemail" id="registrationemail" placeholder="Enter your email address." />
+                    <button type="submit" name="submitbutton" id="submitbutton" title="Register using data above.">Register</button>
+                </fieldset>
+                <p id="registrationresult">&nbsp;</p>
+            </form>
+
+        </main>
+
+        <footer>
+            <p>Background images: <a href="https://www.publicdomainpictures.net/en/view-image.php?image=244471&picture=paint-border" target="_blank">PublicDomainPictures.net</a> and <a href="https://svgsilh.com/image/1618917.html" target="_blank">SVG Silh</a></p>
+        </footer>
+    </body>
+</html>

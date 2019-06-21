@@ -1,0 +1,252 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    "navi navi navi navi"
+    "headr headr headr headr"
+    "main main main main"
+    "foot foot foot foot";
+    grid-template-rows: 3em 5em auto 3em;
+    margin: 0;
+    padding: 0;
+    background: url(../images/paint-border.jpg) top left no-repeat;
+    background-size: contain;
+    font-family: 'Raleway', sans-serif;
+}
+
+nav {
+    grid-area: navi;
+    grid-column: 1 / 5;
+    height: 3em;
+    padding-left: 1em;
+    background: black;
+    color: white;
+    opacity: 0.75;
+}
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: gold;
+}
+
+a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+li.logout {
+    float: right;
+    margin-right: 1em;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+li.logout {
+    float: right;
+}
+
+header {
+    grid-area: headr;
+    grid-column: 1 / 5;
+    height: 5em;
+    padding-left: 1em;
+    background: white;
+    opacity: 0.75;
+}
+
+header h1 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+main.logreg {
+    display: grid;
+    grid-column: 1 / 5;
+    grid-column-gap: 1em;
+    grid-template-areas: 
+    ". . . ."
+    ". login register ."
+    ". . . .";
+    align-items: center;
+    background: url(../images/circle-1.svg) center center no-repeat;
+    background-size: contain;
+}
+
+#login {
+    grid-area: login;
+    background: white;
+}
+
+#registration {
+    grid-area: register;
+    background: white;
+}
+
+main.update {
+    display: grid;
+    grid-column: 1 / 5;
+    grid-column-gap: 1em;
+    grid-template-areas: 
+    ". . . . ."
+    ". . update . ."
+    ". . . . .";
+    align-items: center;
+    background: url(../images/circle-1.svg) center center no-repeat;
+    background-size: contain;
+}
+
+#update {
+    grid-area: update;
+    background: white;
+}
+
+form {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid white;
+    border-radius: 1em;
+    transition: all +.5s ease-in-out;
+    opacity: 0.85;
+}
+
+form:hover {
+    box-shadow: 7px 5px 3px 1px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+}
+
+form fieldset {
+    border: none;
+}
+
+form fieldset legend {
+    font-size: larger;
+    margin-bottom: 1em;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin-bottom: 1em;
+}
+
+form input:focus {
+    border: 2px solid black;
+}
+
+form button {
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    background: green;
+    color: white;
+    border: 1px solid green;
+    transition: background-color 0.5s ease;
+}
+
+form button:hover {
+    background: greenyellow;
+    border: 1px solid greenyellow;
+    color: black;
+}
+
+.errormsg {
+    color: red;
+}
+
+#deletebutton {
+    background: red;
+    color: white;
+    border: 1px solid red;
+    transition: background-color 0.5s ease;
+}
+
+#deletebutton:hover {
+    background: orangered;
+    border: 1px solid orangered;
+}
+
+footer {
+    grid-area: foot;
+    grid-column: 1 / 5;
+    min-height: 3em;
+    padding-left: 1em;
+    background: black;
+    color: white;
+}
+
+@media only screen and (max-width: 800px) {
+
+    body {
+        height: 100%;
+        display: grid;
+        grid-template-areas: 
+        "navi"
+        "headr"
+        "main"
+        "foot";
+        grid-template-rows: 3em 5em auto 3em;
+        margin: 0;
+        padding: 0;
+        background: url(../images/paint-border.jpg) top left no-repeat;
+        background-size: contain;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    main.logreg {
+        display: grid;
+        grid-column: 1 / 5;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+        "."
+        "login"
+        "register"
+        ".";
+        align-items: center;
+        background: url(../images/circle-1.svg) center center no-repeat;
+        background-size: contain;
+    }
+
+    header h1 {
+        font-size: 8vw;
+    }
+
+    form {
+        margin: 1em;
+    }
+
+    form button {
+        margin-right: 0.5em;
+    }
+
+    footer {
+        min-height: 5em;
+    }
+}

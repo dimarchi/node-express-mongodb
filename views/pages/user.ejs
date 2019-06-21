@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Home page of <%= name %></title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200|Ralewaydisplay=swap" rel="stylesheet"> 
+        <link rel="stylesheet" type="text/css" href="/css/mdb.css" />
+        <script src="/js/user.js"></script>
+    </head>
+
+    <body class="details">
+
+        <nav>
+            <ul>
+                <li title="You are here.">Home</li>
+                <li title="Logout" class="logout"><a href="/logout" title="Click here to logout" id="logout">Logout</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Hello, <%= name %></h1>
+        </header>
+
+        <main class="update">
+
+            <form name="update" id="update" method="POST" action="/update">
+                <fieldset>
+                    <legend>Update</legend>
+                    <input type="text" name="updatename" id="updatename" placeholder="Enter your user name." value="<%= name %>" />
+                    <input type="password" name="updatepass" id="updatepass" placeholder="Enter your password." required />
+                    <span class="help-text>"></span>
+                    <input type="email" name="updateemail" id="updateemail" placeholder="Enter your email address." value="<%= email %>" />
+                    <button type="submit" name="submitbutton" id="submitbutton" title="Update your registered information.">Update</button>
+                    <button type="button" name="deletebutton" id="deletebutton" title="Delete your registered information. Not implemented.">Delete</button>
+                </fieldset>
+                <p id="updateresult">&nbsp;</p>
+            </form>
+
+        </main>
+
+        <footer>
+                <p>Background images: <a href="https://www.publicdomainpictures.net/en/view-image.php?image=244471&picture=paint-border" target="_blank">PublicDomainPictures.net</a> and <a href="https://svgsilh.com/image/1618917.html" target="_blank">SVG Silh</a></p>
+        </footer>
+    </body>
+</html>
