@@ -1,1 +1,1 @@
-Database exercise done in Node and Express using Mongodb. Also some EJS sprinkled in.
+Database exercise done in Node and Express using MongoDB. Also some EJS sprinkled in. A user can register, login, and update their credentials that are stored in a MongoDB database. Deletion is not implemented, though.
